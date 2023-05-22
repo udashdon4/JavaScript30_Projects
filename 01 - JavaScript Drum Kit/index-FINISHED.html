@@ -11,7 +11,7 @@
 
   <div class="keys">
     <div data-key="65" class="key">
-      <kbd>A</kbd>
+      <button>A</button>
       <span class="sound">clap</span>
     </div>
     <div data-key="83" class="key">
@@ -60,6 +60,7 @@
 
 <script>
   function removeTransition(e) {
+    console.log(`${e.propertyName}:This is my property name `);
     if (e.propertyName !== 'transform') return;
     e.target.classList.remove('playing');
   }
